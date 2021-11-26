@@ -214,6 +214,8 @@ MonoBehaviour:
   - {fileID: 1065904974984442837, guid: 9305958f87f2a401fadf438cffd3fe6f, type: 3}
   - {fileID: 4374674175986368254, guid: f40f8ceb3041c40d7af4911f1c261ad9, type: 3}
   TrashToSpawn: {fileID: 0}
+  MinSpawnHeight: {fileID: 2007759170}
+  MaxSpawnHeight: {fileID: 357982124}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
