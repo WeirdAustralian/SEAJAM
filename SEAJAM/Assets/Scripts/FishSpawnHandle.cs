@@ -12,6 +12,8 @@ public class FishSpawnHandle : MonoBehaviour
     
     [SerializeField] private Transform MinSpawnHeight;
     [SerializeField] private Transform MaxSpawnHeight;
+
+    [SerializeField] public List<GameObject> AllTrash;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +27,14 @@ public class FishSpawnHandle : MonoBehaviour
         {
             ChoseRandom();
             Instantiate(TrashToSpawn, new Vector3(-9f, Random.Range(MinSpawnHeight.position.y, MaxSpawnHeight.position.y), 0), quaternion.identity);
+            AllTrash.Add(TrashToSpawn);
         }
     }
 
     void ChoseRandom()
     {
         int index = Random.Range(0, Trash.Count);
-        Debug.Log(Trash[index].name);
+        //Debug.Log(Trash[index].name);
         TrashToSpawn = Trash[index];
     }
 }
